@@ -14,5 +14,3 @@ Assumptions - My bisecting k-means chooses next cluster to be clustered in rando
 In k-means, centroids are not being recomputed and data points are not being reassigned to centroids. However, in SSE calculation, mean of the cluster has been considered as the representative of the cluster to account for this problem of the centroid not being recomputed.
 
 Accounted for: singleton clusters cannot be further bisected.
-
-pdf file "hw2submission.pdf" contains answers to the questions
