@@ -1,6 +1,4 @@
 Author - bramach2/tnybny
-Bharathkumar Ramachandra
-200063457
 
 Just one file for code - "hw2.R"
 Edit the line nc = X (line 85) (replace X with the number of clusters desired)
