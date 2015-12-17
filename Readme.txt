@@ -1,6 +1,5 @@
 Author - bramach2/tnybny
 
-Just one file for code - "hw2.R"
 Edit the line nc = X (line 85) (replace X with the number of clusters desired)
 Comment out and uncomment whichever of clust <- mykmeans(du, nc) (line 88) 
 and clust <- bikmeans(du, nc) (line 89) depending on which function you want.
