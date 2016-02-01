@@ -7,7 +7,7 @@
 mykmeans <- function(dat, nc = 2)
 {
     # this function performs k-means clustering
-	cent = dat[sample(1:nrow(dat), nc), ] # randomly pick centroids from data
+	cent <<- dat[sample(1:nrow(dat), nc), ] # randomly pick centroids from data
 	for(i in 1:nrow(dat))
 	{
 		dmin <- 1000
@@ -31,6 +31,7 @@ nc <- 4				# specify desired number of centroids
 cluster <- matrix(1, nrow(dat), 1)	# new column "cluster" with all values = 1,
                                     # this is what we want to start off with
 dat <- data.frame(dat, cluster)		# append new column
+cent <- matrix()
 clust <- mykmeans(dat, nc)
 
 # plot the result of the clustering
@@ -39,6 +40,7 @@ for(i in 1:nc)
 {
 	points(subset(dat[, -3], clust == i), col = i, pch = 16)
 }
+points(cent, pch = "+", cex = 3)
 
 # SSE calculation. ssei is SSE of clustering and ssej holds the sse of a specific cluster
 ssei <- 0
