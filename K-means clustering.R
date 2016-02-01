@@ -23,7 +23,7 @@ mykmeans <- function(dat, nc = 2)
 			}
 		}
 	}
-	return(dat[, -3])
+	return(dat[, 3])
 }
 
 dat <- read.table(file = "data.csv", header = T, sep = ",")
@@ -31,7 +31,7 @@ nc <- 4				# specify desired number of centroids
 cluster <- matrix(1, nrow(dat), 1)	# new column "cluster" with all values = 1,
                                     # this is what we want to start off with
 dat <- data.frame(dat, cluster)		# append new column
-clust <- mykmeans(du, nc)
+clust <- mykmeans(dat, nc)
 
 # plot the result of the clustering
 plot(dat[, -3], main = "Cluster Distributions", sub = "My clustering")
