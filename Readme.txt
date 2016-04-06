@@ -4,4 +4,4 @@ Assumptions - K-means chooses centroids at random from the data points. Stop on 
 
 run the file using - source(“K-means clustering.R”)
 
-Change line 34 to read in your own 2D data.
+Change line 51 to read in your own 2D data.
